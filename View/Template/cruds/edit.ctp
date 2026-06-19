@@ -156,7 +156,13 @@
                       <!-- New Uploads -->
                       <div class="form-group" style="margin-bottom: 10px;">
                         <label>Upload New File</label>
-                        <input type="file" id="file_attachment" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx" class="form-control" onchange="angular.element(this).scope().uploadFile(this.files)" ng-disabled="originalStatus === 'APPROVED' || originalStatus === 'DISAPPROVED'" style="padding: 4px 12px; height: auto;">
+                        <div style="position: relative;">
+                          <input type="file" id="file_attachment" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx" onchange="angular.element(this).scope().uploadFile(this.files)" ng-disabled="originalStatus === 'APPROVED' || originalStatus === 'DISAPPROVED'" style="display: none;">
+                          <label for="file_attachment" class="btn btn-default btn-block" ng-class="{'disabled': originalStatus === 'APPROVED' || originalStatus === 'DISAPPROVED'}" style="text-align: left; background: #fff; border: 1px solid #ccc; display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 6px 12px; height: 34px; border-radius: 4px; font-weight: normal; margin-bottom: 0;">
+                            <i class="fa fa-folder-open" style="color: #4e73df;"></i>
+                            <span style="color: #6e707e;">Browse and upload files...</span>
+                          </label>
+                        </div>
                       </div>
 
                       <div ng-if="uploading" style="color: #4e73df; font-style: italic; margin-bottom: 10px;">
