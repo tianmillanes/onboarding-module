@@ -1,0 +1,325 @@
+/* CRUD Module Aesthetic CSS */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+.crud-body {
+  font-family: 'Outfit', sans-serif !important;
+  color: #2c3e50;
+}
+
+.crud-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.crud-card:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.crud-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #f0f3f6;
+  padding-bottom: 20px;
+}
+
+.crud-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a252f;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.crud-title i {
+  color: #6366f1;
+}
+
+.crud-btn-add {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: #ffffff !important;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none !important;
+}
+
+.crud-btn-add:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+}
+
+.crud-search-wrapper {
+  position: relative;
+  max-width: 350px;
+  width: 100%;
+}
+
+.crud-search-input {
+  width: 100%;
+  padding: 10px 16px;
+  padding-right: 40px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.crud-search-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.crud-search-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.crud-table {
+  width: 100%;
+  margin-top: 15px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.crud-table th {
+  background-color: #f8fafc;
+  color: #475569;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.crud-table td {
+  padding: 16px 18px;
+  color: #334155;
+  font-size: 14px;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.2s ease;
+}
+
+.crud-table tr:last-child td {
+  border-bottom: none;
+}
+
+.crud-table tr:hover td {
+  background-color: #f8fafc;
+}
+
+.crud-empty-state {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.crud-empty-icon {
+  font-size: 48px;
+  color: #cbd5e1;
+  margin-bottom: 15px;
+}
+
+.crud-empty-text {
+  font-size: 16px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.crud-badge {
+  background: #f1f5f9;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 12px;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+.crud-action-btns {
+  display: flex;
+  gap: 6px;
+}
+
+.crud-btn-action {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  color: #64748b;
+  background: #f1f5f9;
+}
+
+.crud-btn-action:hover {
+  transform: translateY(-1px);
+}
+
+.crud-btn-view:hover {
+  background: #e0f2fe;
+  color: #0284c7;
+}
+
+.crud-btn-edit:hover {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.crud-btn-delete:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* Forms */
+.crud-form-group {
+  margin-bottom: 20px;
+}
+
+.crud-form-label {
+  font-weight: 600;
+  color: #344054;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.crud-form-control {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+.crud-form-control:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+/* Detail View Table */
+.crud-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.crud-detail-table th {
+  width: 180px;
+  padding: 16px 0;
+  font-weight: 600;
+  color: #475569;
+  border-bottom: 1px solid #f1f5f9;
+  text-align: left;
+}
+
+.crud-detail-table td {
+  padding: 16px 0;
+  color: #0f172a;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.crud-detail-table tr:last-child th,
+.crud-detail-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Datepicker overrides for high contrast visibility */
+.datepicker-dropdown,
+.datepicker {
+  background: #ffffff !important;
+  color: #1e293b !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+  padding: 10px !important;
+  font-family: 'Outfit', sans-serif !important;
+}
+
+.datepicker table {
+  background-color: #ffffff !important;
+}
+
+.datepicker table tr td, 
+.datepicker table tr th {
+  color: #1e293b !important;
+  border-radius: 8px !important;
+  font-size: 13px !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+
+.datepicker-days table tr td, 
+.datepicker-days table tr th {
+  width: 35px !important;
+  height: 35px !important;
+}
+
+.datepicker table tr td.day:hover,
+.datepicker table tr td.day.focused {
+  background: #f1f5f9 !important;
+  cursor: pointer !important;
+}
+
+.datepicker table tr td.active,
+.datepicker table tr td.active:hover {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+.datepicker table tr td.old,
+.datepicker table tr td.new {
+  color: #cbd5e1 !important;
+}
+
+.datepicker th.datepicker-switch {
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  color: #0f172a !important;
+}
+
+.datepicker th.prev,
+.datepicker th.next {
+  color: #6366f1 !important;
+  font-size: 16px !important;
+}
+
+.datepicker-dropdown:after {
+  border-bottom-color: #ffffff !important;
+}
+
+.datepicker-dropdown:before {
+  border-bottom-color: #e2e8f0 !important;
+}

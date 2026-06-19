@@ -1,0 +1,256 @@
+/* ==========================================
+   GLASSMORPHISM APPLE-STYLE THEME FOR CRUD
+   ========================================== */
+
+/* Glass Container mesh-like subtle backdrop gradient */
+.crud-glass-container {
+  position: relative;
+  min-height: calc(100vh - 100px);
+  padding: 30px;
+  border-radius: 24px;
+  background: #f4f6fa;
+  overflow: hidden;
+}
+
+/* Localized mesh colors (gradient shapes) to shine through the glass blur */
+.crud-glass-container::before {
+  content: "";
+  position: absolute;
+  top: -15%;
+  left: -15%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(0, 113, 227, 0.15) 0%, rgba(0, 113, 227, 0) 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.crud-glass-container::after {
+  content: "";
+  position: absolute;
+  bottom: -15%;
+  right: -15%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(106, 13, 173, 0.1) 0%, rgba(106, 13, 173, 0) 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Glassmorphic Panel Overrides */
+.crud-glass-container .panel {
+  position: relative !important;
+  z-index: 1 !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.45) !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.06) !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+}
+
+.crud-glass-container .panel-primary>.panel-heading {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  padding: 18px 24px !important;
+}
+
+.crud-glass-container .panel-body,
+.crud-glass-container .panel-body-custom {
+  background: transparent !important;
+  padding: 24px !important;
+}
+
+/* Segmented control tabs - iOS / macOS style */
+.crud-glass-container .crud-tab-bar {
+  background: rgba(0, 0, 0, 0.04) !important;
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+  padding: 4px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.crud-glass-container .crud-tab-btn {
+  background: transparent !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  color: #515154 !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.crud-glass-container .crud-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  color: #1d1d1f !important;
+}
+
+.crud-glass-container .crud-tab-btn.active {
+  background: rgba(255, 255, 255, 0.8) !important;
+  color: #0071e3 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Premium Form Elements */
+.crud-glass-container .form-control {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+  border-radius: 10px !important;
+  transition: all 0.25s ease !important;
+}
+
+.crud-glass-container .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-color: #0071e3 !important;
+  box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.15) !important;
+}
+
+.crud-glass-container .form-control[readonly] {
+  background-color: rgba(0, 0, 0, 0.03) !important;
+  border-color: rgba(0, 0, 0, 0.06) !important;
+  color: #515154 !important;
+}
+
+/* Search Bar customization */
+.crud-glass-container .input-group-btn .btn-default {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  height: 38px !important;
+}
+
+.crud-glass-container .input-group-btn .btn-default:hover {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Responsive Table & Headers */
+.glass-table-container {
+  background: rgba(255, 255, 255, 0.3) !important;
+  border-radius: 14px !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  overflow: hidden !important;
+  margin-top: 15px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02) !important;
+}
+
+.crud-glass-container .crud-table {
+  border: none !important;
+  margin-bottom: 0 !important;
+}
+
+.crud-glass-container .crud-table th {
+  background: rgba(245, 245, 247, 0.6) !important;
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+  color: #1d1d1f !important;
+  font-weight: 600 !important;
+  font-size: 11px !important;
+  letter-spacing: 0.3px !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+  padding: 14px 16px !important;
+}
+
+.crud-glass-container .crud-table td {
+  border: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04) !important;
+  background: transparent !important;
+  padding: 14px 16px !important;
+  transition: background-color 0.2s ease !important;
+  vertical-align: middle !important;
+}
+
+.crud-glass-container .crud-table tbody tr:hover td {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Locked record opacity indicator */
+.crud-glass-container tr.row-locked td {
+  color: rgba(29, 29, 31, 0.7) !important;
+}
+
+/* Info detail cards (View Details) */
+.crud-glass-container .info-card {
+  background: rgba(255, 255, 255, 0.45) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 16px !important;
+  padding: 24px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02) !important;
+}
+
+.crud-glass-container .table-card {
+  background: rgba(255, 255, 255, 0.45) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02) !important;
+}
+
+.crud-glass-container .table-card-header {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+  padding: 16px 20px !important;
+  font-weight: 600 !important;
+  color: #1d1d1f !important;
+}
+
+/* Centered & Premium Glass Modals */
+.crud-glass-container .modal-content,
+#filterModal .modal-content,
+#beneficiaryModal .modal-content {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(30px) !important;
+  -webkit-backdrop-filter: blur(30px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15) !important;
+}
+
+.crud-glass-container .modal-header,
+#filterModal .modal-header,
+#beneficiaryModal .modal-header {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+  padding: 16px 24px !important;
+}
+
+.crud-glass-container .modal-footer,
+#filterModal .modal-footer,
+#beneficiaryModal .modal-footer {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+  padding: 14px 24px !important;
+}
+
+/* File Attachment container */
+.crud-glass-container .file-upload-card {
+  background: rgba(255, 255, 255, 0.3) !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  border-radius: 12px !important;
+  padding: 20px !important;
+}
+
+/* custom scrollbars inside tables */
+.glass-table-container::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.glass-table-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.glass-table-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+}
+.glass-table-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
