@@ -90,8 +90,9 @@ class CrudsController extends AppController {
     $conditions = $this->_buildConditions($this->request->query);
 
     $this->paginate = array('Crud' => array(
-      'limit' => 25,
+      'limit' => 51,
       'page'  => $page,
+
       'conditions' => $conditions,
       'order' => array('Crud.id' => 'ASC')
     ));

@@ -15,6 +15,7 @@ class TemplateController extends AppController {
     $this->render($view);
   }
   
+
   // DASHBOARD
   public function dashboard__index() {}
   
@@ -34,3 +35,6 @@ class TemplateController extends AppController {
   public function crud_statuses__index() {}
 
 }
+
+
+
